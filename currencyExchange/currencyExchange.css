@@ -1,0 +1,46 @@
+.headings {
+    height: 99px;
+    font-size: 46px;
+    color: white;
+    font-family: serif;
+}
+
+.cardBodyHeight {
+    height: 568px;
+}
+
+.backgroundImage {
+    background: transparent url('images/blackBackground.jpg') no-repeat center center /cover;
+}
+
+.currencyBackground {
+    background: transparent url('images/currency2.jpg') no-repeat center center /cover;
+}
+
+.selectCurrency {
+    color: wheat;
+    font-family: serif;
+}
+
+.cardStyle {
+    width: auto;
+    float: right;
+    border-radius: 40px 0px 0px 40px !important;
+    border: 2px !important;
+    text-align: right !important;
+    background: #988a4d !important;
+}
+
+.cardStyleFont {
+    color: white;
+    font-size: 18px !important;
+    font-family: serif;
+}
+
+.middleText {
+    padding-left: 174px;
+    color: #eebb7c;
+    font-size: 25px;
+    font-family: serif;
+    font-weight: 800;
+}

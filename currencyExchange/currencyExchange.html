@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="angular.js"></script>
+<script src="currencyExchange.js"></script>
+<link rel="stylesheet" href="currencyExchange.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="card" ng-app="sultanApp" ng-controller="currencyExchange2">
+        <div class="card-header text-center bg-success headings currencyBackground">
+          Foreign Exchange Rates
+        </div>
+        <div class="card-body cardBodyHeight backgroundImage">
+          <h2 class="card-title selectCurrency">SELECT CURRENCY</h2>
+          <div class="btn-group" style="padding-bottom: 20px;">
+            <button type="button" class="btn btn-info btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Please Select Currency
+            </button>
+              <ul class="dropdown-menu">
+                <li ng-repeat="c in currencyList" class="dropdown-item" ng-model="selectedCurrency" ng-click="getCurrencyRates(c.currency_code)">{{c.currency_name}}</li>
+              </ul>
+          </div>
+          <span class="middleText">{{defaultCurrency}}</span>
+          <div class="card text-white cardStyle">
+            <div class="card-body cardStyleFont">Showing exchange rates of {{defaultCurrency}} against different countries</div>
+          </div>
+          <div style="position: relative !important;height: 390px !important;overflow: auto !important;">
+            <table class="table table-dark table-striped">
+              <thead>
+                <tr>
+                  <th>S.No.</th>
+                  <th>Currency Code</th>
+                  <th>Currency Name</th>
+                  <th>Exchange Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="rate in currencyArray">
+                  <td>{{rate.id}}</td>
+                  <td>{{rate.currencyCode}}</td>
+                  <td>{{rate.currencyName}}</td>
+                  <td>{{rate.rate}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

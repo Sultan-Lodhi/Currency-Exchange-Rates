@@ -1,0 +1,8 @@
+CREATE TABLE `currency_list` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `currency_name` varchar(100) COLLATE 'latin1_swedish_ci' NOT NULL,
+  `currency_code` varchar(40) COLLATE 'latin1_swedish_ci' NOT NULL
+) ENGINE='MyISAM' COLLATE 'latin1_swedish_ci';
+
+
+INSERT INTO currency_list (id,currency_name,currency_code) VALUES (1,'Indian Rupee (INR)','INR'),(2,'Australian Dollar (AUD)','AUD'),(3,'Canadian Dollar (CAD)','CAD'),(4,'Japanese Yen (JPY)','JPY');
